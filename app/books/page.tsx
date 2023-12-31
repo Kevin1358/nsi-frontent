@@ -53,6 +53,9 @@ const Books = async ({searchParams}:any)=>{
               <td colSpan={2}><a href="/add-book">Tambah Buku</a></td>
             </tr>
             <tr>
+              <th colSpan={2}>Books</th>
+            </tr>
+            <tr>
               <th>Title</th>
               <th>Detail</th>
             </tr>

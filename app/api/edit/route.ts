@@ -1,6 +1,7 @@
 import { NextResponse,NextRequest } from "next/server";
 import { cookies } from 'next/headers'
 import { json } from "stream/consumers";
+import { redirect } from "next/dist/server/api-utils";
 
 
 export async function PUT(request:NextRequest) {
@@ -14,9 +15,8 @@ export async function PUT(request:NextRequest) {
       headers: {Authorization: 'Bearer '+token?.value, accept: "application/json","Content-Type": "application/json"},
       body: JSON.stringify(data),
     }
-    const resp = await fetch(target, fetchReq
-        )
+    const resp = await fetch(target, fetchReq)
     const respJson = await resp.json();
-    console.log(respJson);
-    return NextResponse.json(respJson,{status:resp.status})
+    //redirect(307,"/books/"+bookId);
+    return NextResponse.json(respJson,{status:resp.status});
 }

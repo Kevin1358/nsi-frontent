@@ -26,6 +26,7 @@ const BookDetailComp = (props:{prop:BookDetailCL}) => {
     })
     .then((result)=>{
       console.log(result);
+      location.reload();
     })
   }
   console.log(props);
@@ -71,15 +72,15 @@ const BookDetailComp = (props:{prop:BookDetailCL}) => {
             <td>website</td>
             <td><input type="text" name="website" defaultValue={props.prop.bookDetail.website}/></td>
           </tr>
-        </tbody>
-      </table>
-      <table>
-        <tbody>
           <tr>
             <th colSpan={2}>Action</th>
           </tr>
           <tr>
+            <td>Save Change</td>
             <td><button type="submit">Save Change</button></td>
+          </tr>
+          <tr>
+            <td>Delete</td>
             <td><button type='button' onClick={(ev)=>{
               ev.preventDefault;
               location.href="/api/deleteBook?bookid="+bookId;
