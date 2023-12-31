@@ -12,6 +12,8 @@ const Home = () => {
         <br />
         <a href="" className="linkInactive">Books List</a>
         <br />
+        <a href="" className="linkInactive">Profile</a>
+        <br />
         <a href="/login" className="linkActive">Login</a>
         <br />
         <a href="/register" className="linkActive">Register</a>
@@ -25,6 +27,8 @@ const Home = () => {
         <h1>Home</h1>
         <br />
         <a href="/books" className="linkActive">Books List</a>
+        <br />
+        <a href="/profile" className="linkActive">Profile</a>
         <br />
         <a href="" className="linkInactive">Login</a>
         <br />

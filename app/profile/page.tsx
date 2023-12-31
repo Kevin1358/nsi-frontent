@@ -28,7 +28,7 @@ const page = async () => {
           </tr>
           <tr>
             <td>Name</td>
-            <td><input type="text" readOnly defaultValue={responseText.id}/></td>
+            <td><input type="text" readOnly defaultValue={responseText.name}/></td>
           </tr>
           <tr>
             <td>E-mail</td>
